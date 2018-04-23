@@ -1,6 +1,6 @@
-# y
+# Vue Quotes Application
 
-> y
+> Vue Quotes Application
 
 ## Build Setup
 
