@@ -13,26 +13,24 @@
 </template>
 
 <script>
-  import Quote from './Quote.vue'
-
 export default {
-    data: function() {
-        return {
-            quote: ''
-        };
-    },
-    methods: {
-        addQuote() {
-            this.$emit('quoteAdded', this.quote);
-            this.quote = '';
-        }
+  data: function() {
+    return {
+      quote: ""
+    };
+  },
+  methods: {
+    addQuote() {
+      this.$emit("quoteAdded", this.quote);
+      this.quote = "";
     }
-}
+  }
+};
 </script>
 
 <style scoped>
-    button {
-        display: block;
-        margin: 0 auto;
-    }
+button {
+  display: block;
+  margin: 0 auto;
+}
 </style>

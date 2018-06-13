@@ -1,25 +1,24 @@
 <template>
   <div class="row">
-      <app-quote v-for="(quote, index) in quotes" @click.native="deleteQuote(index)">{{quote}}</app-quote>
+      <app-quote v-for="(quote, index) in quotesArray" :key="index" @click.native="deleteQuote(index)">{{quote}}</app-quote>
   </div>
 </template>
 
 <script>
-  import Quote from './Quote.vue'
+import Quote from "./Quote.vue";
 
 export default {
-  props: ['quotes'],
+  props: ["quotesArray"],
   components: {
-      appQuote: Quote
+    appQuote: Quote
   },
   methods: {
-      deleteQuote(index) {
-          this.$emit('quoteDeleted', index );
-      }
+    deleteQuote(index) {
+      this.$emit("quoteDeleted", index);
+    }
   }
-}
+};
 </script>
 
 <style scoped>
-    
 </style>
